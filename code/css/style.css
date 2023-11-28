@@ -61,7 +61,9 @@ body{
    margin-top: 20px;
    border: 0;
    outline: 0;
-   background: rgba(51, 91, 183, 0.989);
+   background: radial-gradient(circle at center, rgb(255, 255, 255), rgb(72, 98, 201), rgb(0, 0, 0));
+   /* background: linear-gradient(rgb); */
+   /* background: rgba(51, 91, 183, 0.7); */
    border-radius: 50%;
    /* width: 100px;
    height: 100px; */
