@@ -12,7 +12,7 @@ body{
 .card{
    width: 90%;
    max-width: 470px;
-   background: linear-gradient(135deg, #9cb0aa, rgb(12, 16, 49));
+   background: linear-gradient(135deg, #ffffff, rgb(12, 16, 49));
    margin: 100px auto 0;
    border-radius: 30px;
    padding: 40px 35px;
@@ -55,4 +55,16 @@ body{
 
 .search button img{
    width: 60px;
+}
+
+.weather img{
+   margin-top: 20px;
+   border: 0;
+   outline: 0;
+   background: rgba(51, 91, 183, 0.989);
+   border-radius: 50%;
+   /* width: 100px;
+   height: 100px; */
+   cursor: cell;
+
 }
