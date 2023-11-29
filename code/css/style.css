@@ -12,7 +12,29 @@ body{
 .card{
    width: 90%;
    max-width: 470px;
-   background: linear-gradient(135deg, #ffffff, rgb(12, 16, 49));
+   /* Color gradients */
+   /* sky */
+   /* background: linear-gradient(135deg, #1488CC,#2B32B2); */
+
+   /* copper */
+   /* background: linear-gradient(135deg, #B79891,#94716B); */
+
+   /* Anamnisar */
+   /* background: linear-gradient(135deg, #9796f0,#fbc7d4); */
+
+   /* Mango */
+   /* background: linear-gradient(135deg, #ffe259,#ffa751); */
+
+   /* Lunada */   
+   /* background: linear-gradient(135deg, #5433FF,#20BDFF, #A5FECB); */
+   
+   /* Cool blues */
+   /* background: linear-gradient(135deg, #2193b0,#6dd5ed); */
+
+   /* JShine */
+   background: linear-gradient(135deg, #12c2e9,#c471ed, #f64f59);
+
+
    margin: 100px auto 0;
    border-radius: 30px;
    padding: 40px 35px;
@@ -46,27 +68,49 @@ body{
 .search button{
    border: 0;
    outline: 0;
-   background: rgb(6, 6, 10);
-   border-radius: 100%;
-   /* width: 60px;
-   height: 60px; */
+   background: rgba(114, 114, 200, 0);
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
    cursor: crosshair;
 }
 
 .search button img{
-   width: 60px;
+   width: 50px;
 }
 
-.weather img{
+/* .weather img{
    margin-top: 20px;
    border: 0;
    outline: 0;
    background: radial-gradient(circle at center, rgb(255, 255, 255), rgb(72, 98, 201), rgb(0, 0, 0));
-   /* background: linear-gradient(rgb); */
-   /* background: rgba(51, 91, 183, 0.7); */
+   background: linear-gradient(rgb); 
+   background: rgba(51, 91, 183, 0.7);
    border-radius: 50%;
-   /* width: 100px;
-   height: 100px; */
+   width: 170px;
    cursor: cell;
+} */
 
+.weather-icon{
+   width:170px;
+   margin-top:30px;
+}
+
+.weather h1{
+   font-size: 80px;
+   font-weight: 500;;
+}
+
+.weather h2{
+   font-size: 45px;
+   font-weight: 400;
+   margin-top: -10px;
+}
+
+.details{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 20px;
+   margin-top: 50px;
 }
