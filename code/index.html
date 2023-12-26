@@ -55,7 +55,6 @@
          const key = document.querySelector(".info input")
 
          async function checkWeather(city, apiKey){
-            <!-- const apiKey = document.getElementById('apiKey').value; -->
             const response = await fetch(apiURL+city+`&appid=${apiKey}`);
             if (response.status == 404){
                document.querySelector('.error').style.display = 'block';
@@ -93,7 +92,6 @@
          searchBtn.addEventListener("click",()=>{
             checkWeather(searchBox.value, key.value);
          })
-         <!-- checkWeather(); -->
       </script>
    </body>
 </html>
