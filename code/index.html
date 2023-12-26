@@ -9,11 +9,12 @@
       <link rel="stylesheet" href="css\style.css">
    </head>
    <body>
-      <a href="https://uigradients.com/">Color gradients from uiGradients</a>
+      <a href="https://uigradients.com/">Color gradients from uiGradients</a><br>
+      <input type="text" placeholder="api Key?" id="apiKey" spellcheck="false">
       <div class="card">
          <div class="search">
             <input type="text" placeholder="City?" spellcheck="false">
-            <button><img src="../images/search.png" alt="search"></button>
+            <button onclick="checkWeather()"><img src="../images/search.png" alt="search"></button>
          </div>
          <div class="weather">
             <img src="../images/drizzle.png" alt="weather image" class="weather-icon">
@@ -41,5 +42,21 @@
             </div>
          </div>
       </div>
+      <script>
+         const apiURL  ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=islamabad";
+
+         async function checkWeather(){
+            const apiKey = document.getElementById('apiKey').value;
+            const city = document.getElementById
+            const response = await fetch(apiURL+`&appid=${apiKey}`);
+            var data = await response.json();
+            console.log(data);
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".temperature").innerHTML = data.main.temp + '°';
+            document.querySelector(".humidity").innerHTML = data.main.humidity + '%';
+            document.querySelector(".wind").innerHTML = data.wind.speed + 'kmh';
+         }
+         <!-- checkWeather(); -->
+      </script>
    </body>
 </html>
