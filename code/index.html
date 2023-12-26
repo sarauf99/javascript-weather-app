@@ -9,8 +9,10 @@
       <link rel="stylesheet" href="css\style.css">
    </head>
    <body>
-      <a href="https://uigradients.com/">Color gradients from uiGradients</a><br>
-      <input type="text" placeholder="api Key?" id="apiKey" spellcheck="false">
+      <div class="info">
+         <a href="https://uigradients.com/">Color gradients from uiGradients</a><br>
+         <input type="text" placeholder="api Key?" id="apiKey" spellcheck="false">
+      </div>
       <div class="card">
          <div class="search">
             <input type="text" placeholder="City?" spellcheck="false">
@@ -50,11 +52,11 @@
          const searchBox = document.querySelector(".search input")
          const searchBtn = document.querySelector(".search button")
          const weatherIcon = document.querySelector(".weather-icon")
+         const key = document.querySelector(".info input")
 
-         async function checkWeather(){
-            const apiKey = document.getElementById('apiKey').value;
-            const city = document.getElementById
-            const response = await fetch(apiURL+`&appid=${apiKey}`);
+         async function checkWeather(city, apiKey){
+            <!-- const apiKey = document.getElementById('apiKey').value; -->
+            const response = await fetch(apiURL+city+`&appid=${apiKey}`);
             if (response.status == 404){
                document.querySelector('.error').style.display = 'block';
                document.querySelector('.weather').style.display = 'none';
@@ -89,7 +91,7 @@
             
          }
          searchBtn.addEventListener("click",()=>{
-            checkWeather(searchBox.value);
+            checkWeather(searchBox.value, key.value);
          })
          <!-- checkWeather(); -->
       </script>
